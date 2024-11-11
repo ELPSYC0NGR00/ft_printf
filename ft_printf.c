@@ -9,6 +9,13 @@
 /*   Updated: 2024/11/08 14:41:41 by fde-simo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include	"../includes/ft_printd.h"
+
+static void	ft_printf_checker(char s, va_list *args, int *len, int *i)
+{
+	if (s == 'c')
+		ft_putcharacter_length(va_arg(*args, int), len);
+}
 
 int ft_printf(char const *string, ...)
 {
