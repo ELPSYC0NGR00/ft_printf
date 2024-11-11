@@ -27,5 +27,12 @@ int ft_printf(char const *string, ...)
 			ft_printf_check(string[i], &args, &length, &i); //llamo a la funcion "ft_printf_check"
 			i++;
 		}
+		else
+		{
+			ft_putcharacter_length((char)string[i], &length);
+			i++;
+		}
+		va_end(args);
+		return(length);
 	}
 }
